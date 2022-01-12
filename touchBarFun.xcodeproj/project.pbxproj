@@ -7,14 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F231D10275EB44B0086B55B /* StatusBarItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F231D0F275EB44B0086B55B /* StatusBarItemManager.m */; };
+		4F231D13275EC38A0086B55B /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F231D12275EC38A0086B55B /* ScriptingBridge.framework */; };
+		4F4D0941275FCA5600EDC939 /* UIAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4D0940275FCA5600EDC939 /* UIAccess.m */; };
+		4F4D0944275FCAA200EDC939 /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4D0943275FCAA200EDC939 /* MenuItem.m */; };
+		4F4D094A275FD10500EDC939 /* ExternalMB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4D0949275FD10500EDC939 /* ExternalMB.m */; };
+		4F8840372759496500E68A7A /* SubmenuTouchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8840362759496500E68A7A /* SubmenuTouchBar.m */; };
+		4F88403D27594F5300E68A7A /* NSMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F88403C27594F5300E68A7A /* NSMenuButton.m */; };
+		4F8840472759C36300E68A7A /* DFRPrivateWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8840452759C36300E68A7A /* DFRPrivateWrapper.m */; };
+		4F8840482759C36300E68A7A /* DFRPrivateLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8840462759C36300E68A7A /* DFRPrivateLoader.m */; };
 		4FEB2BD4272B1185001D9EBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEB2BD3272B1185001D9EBE /* AppDelegate.m */; };
 		4FEB2BD7272B1185001D9EBE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEB2BD6272B1185001D9EBE /* ViewController.m */; };
 		4FEB2BD9272B1186001D9EBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FEB2BD8272B1186001D9EBE /* Assets.xcassets */; };
 		4FEB2BDC272B1186001D9EBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FEB2BDA272B1186001D9EBE /* Main.storyboard */; };
 		4FEB2BDE272B1186001D9EBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEB2BDD272B1186001D9EBE /* main.m */; };
+		4FEB2BE7272B13B9001D9EBE /* WC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEB2BE6272B13B8001D9EBE /* WC.m */; };
+		4FEB2C09272B5DB6001D9EBE /* NSPopoverTouchBarItem+NSTouchBarItemMagic.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEB2C08272B5DB6001D9EBE /* NSPopoverTouchBarItem+NSTouchBarItemMagic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F231D0E275EB44B0086B55B /* StatusBarItemManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusBarItemManager.h; sourceTree = "<group>"; };
+		4F231D0F275EB44B0086B55B /* StatusBarItemManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusBarItemManager.m; sourceTree = "<group>"; };
+		4F231D12275EC38A0086B55B /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		4F231D18275ECAF90086B55B /* System Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "System Events.h"; sourceTree = "<group>"; };
+		4F4D093E275F53EB00EDC939 /* proto-tb.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "proto-tb.storyboard"; sourceTree = "<group>"; };
+		4F4D093F275FCA5600EDC939 /* UIAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIAccess.h; sourceTree = "<group>"; };
+		4F4D0940275FCA5600EDC939 /* UIAccess.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIAccess.m; sourceTree = "<group>"; };
+		4F4D0942275FCAA200EDC939 /* MenuItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
+		4F4D0943275FCAA200EDC939 /* MenuItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
+		4F4D0948275FD10500EDC939 /* ExternalMB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExternalMB.h; sourceTree = "<group>"; };
+		4F4D0949275FD10500EDC939 /* ExternalMB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExternalMB.m; sourceTree = "<group>"; };
+		4F4D094B275FD7E700EDC939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4F4D094C2761777500EDC939 /* NSTouchBarExtra.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTouchBarExtra.h; sourceTree = "<group>"; };
+		4F5C808F278F99C6005E0A67 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4F88403427593A2100E68A7A /* NSMenu+Carbon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMenu+Carbon.h"; sourceTree = "<group>"; };
+		4F8840352759496500E68A7A /* SubmenuTouchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubmenuTouchBar.h; sourceTree = "<group>"; };
+		4F8840362759496500E68A7A /* SubmenuTouchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubmenuTouchBar.m; sourceTree = "<group>"; };
+		4F88403B27594F5300E68A7A /* NSMenuButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSMenuButton.h; sourceTree = "<group>"; };
+		4F88403C27594F5300E68A7A /* NSMenuButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSMenuButton.m; sourceTree = "<group>"; };
+		4F8840412759C36300E68A7A /* Obfuscation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Obfuscation.h; sourceTree = "<group>"; };
+		4F8840422759C36300E68A7A /* DFRPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFRPrivate.h; sourceTree = "<group>"; };
+		4F8840432759C36300E68A7A /* DFRPrivateWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFRPrivateWrapper.h; sourceTree = "<group>"; };
+		4F8840442759C36300E68A7A /* DFRPrivateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFRPrivateHeader.h; sourceTree = "<group>"; };
+		4F8840452759C36300E68A7A /* DFRPrivateWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFRPrivateWrapper.m; sourceTree = "<group>"; };
+		4F8840462759C36300E68A7A /* DFRPrivateLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFRPrivateLoader.m; sourceTree = "<group>"; };
 		4FEB2BCF272B1185001D9EBE /* touchBarFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = touchBarFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FEB2BD2272B1185001D9EBE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4FEB2BD3272B1185001D9EBE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -24,6 +60,10 @@
 		4FEB2BDB272B1186001D9EBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FEB2BDD272B1186001D9EBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4FEB2BDF272B1186001D9EBE /* touchBarFun.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = touchBarFun.entitlements; sourceTree = "<group>"; };
+		4FEB2BE5272B13B8001D9EBE /* WC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WC.h; sourceTree = "<group>"; };
+		4FEB2BE6272B13B8001D9EBE /* WC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WC.m; sourceTree = "<group>"; };
+		4FEB2C07272B5DB6001D9EBE /* NSPopoverTouchBarItem+NSTouchBarItemMagic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSPopoverTouchBarItem+NSTouchBarItemMagic.h"; sourceTree = "<group>"; };
+		4FEB2C08272B5DB6001D9EBE /* NSPopoverTouchBarItem+NSTouchBarItemMagic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSPopoverTouchBarItem+NSTouchBarItemMagic.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +71,62 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F231D13275EC38A0086B55B /* ScriptingBridge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F231D11275EC38A0086B55B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F231D12275EC38A0086B55B /* ScriptingBridge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F4D0947275FCAEC00EDC939 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				4F4D0942275FCAA200EDC939 /* MenuItem.h */,
+				4F4D0943275FCAA200EDC939 /* MenuItem.m */,
+				4F4D093F275FCA5600EDC939 /* UIAccess.h */,
+				4F4D0940275FCA5600EDC939 /* UIAccess.m */,
+				4F231D18275ECAF90086B55B /* System Events.h */,
+				4F88403F2759C36300E68A7A /* DFRPrivate */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		4F88403F2759C36300E68A7A /* DFRPrivate */ = {
+			isa = PBXGroup;
+			children = (
+				4F8840402759C36300E68A7A /* include */,
+				4F8840452759C36300E68A7A /* DFRPrivateWrapper.m */,
+				4F8840462759C36300E68A7A /* DFRPrivateLoader.m */,
+			);
+			path = DFRPrivate;
+			sourceTree = "<group>";
+		};
+		4F8840402759C36300E68A7A /* include */ = {
+			isa = PBXGroup;
+			children = (
+				4F8840412759C36300E68A7A /* Obfuscation.h */,
+				4F8840422759C36300E68A7A /* DFRPrivate.h */,
+				4F8840432759C36300E68A7A /* DFRPrivateWrapper.h */,
+				4F8840442759C36300E68A7A /* DFRPrivateHeader.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 		4FEB2BC6272B1185001D9EBE = {
 			isa = PBXGroup;
 			children = (
+				4F5C808F278F99C6005E0A67 /* README.md */,
 				4FEB2BD1272B1185001D9EBE /* touchBarFun */,
 				4FEB2BD0272B1185001D9EBE /* Products */,
+				4F231D11275EC38A0086B55B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +141,29 @@
 		4FEB2BD1272B1185001D9EBE /* touchBarFun */ = {
 			isa = PBXGroup;
 			children = (
+				4F4D094B275FD7E700EDC939 /* Info.plist */,
+				4F4D0947275FCAEC00EDC939 /* External */,
+				4F88403B27594F5300E68A7A /* NSMenuButton.h */,
+				4F88403C27594F5300E68A7A /* NSMenuButton.m */,
 				4FEB2BD2272B1185001D9EBE /* AppDelegate.h */,
 				4FEB2BD3272B1185001D9EBE /* AppDelegate.m */,
+				4FEB2BE5272B13B8001D9EBE /* WC.h */,
+				4FEB2BE6272B13B8001D9EBE /* WC.m */,
+				4F4D094C2761777500EDC939 /* NSTouchBarExtra.h */,
+				4F4D0948275FD10500EDC939 /* ExternalMB.h */,
+				4F4D0949275FD10500EDC939 /* ExternalMB.m */,
+				4F8840352759496500E68A7A /* SubmenuTouchBar.h */,
+				4F8840362759496500E68A7A /* SubmenuTouchBar.m */,
+				4F231D0E275EB44B0086B55B /* StatusBarItemManager.h */,
+				4F231D0F275EB44B0086B55B /* StatusBarItemManager.m */,
 				4FEB2BD5272B1185001D9EBE /* ViewController.h */,
 				4FEB2BD6272B1185001D9EBE /* ViewController.m */,
 				4FEB2BD8272B1186001D9EBE /* Assets.xcassets */,
 				4FEB2BDA272B1186001D9EBE /* Main.storyboard */,
+				4F4D093E275F53EB00EDC939 /* proto-tb.storyboard */,
+				4FEB2C07272B5DB6001D9EBE /* NSPopoverTouchBarItem+NSTouchBarItemMagic.h */,
+				4F88403427593A2100E68A7A /* NSMenu+Carbon.h */,
+				4FEB2C08272B5DB6001D9EBE /* NSPopoverTouchBarItem+NSTouchBarItemMagic.m */,
 				4FEB2BDD272B1186001D9EBE /* main.m */,
 				4FEB2BDF272B1186001D9EBE /* touchBarFun.entitlements */,
 			);
@@ -137,9 +239,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F231D10275EB44B0086B55B /* StatusBarItemManager.m in Sources */,
 				4FEB2BD7272B1185001D9EBE /* ViewController.m in Sources */,
+				4F8840482759C36300E68A7A /* DFRPrivateLoader.m in Sources */,
+				4FEB2BE7272B13B9001D9EBE /* WC.m in Sources */,
 				4FEB2BDE272B1186001D9EBE /* main.m in Sources */,
+				4F88403D27594F5300E68A7A /* NSMenuButton.m in Sources */,
 				4FEB2BD4272B1185001D9EBE /* AppDelegate.m in Sources */,
+				4F4D0944275FCAA200EDC939 /* MenuItem.m in Sources */,
+				4FEB2C09272B5DB6001D9EBE /* NSPopoverTouchBarItem+NSTouchBarItemMagic.m in Sources */,
+				4F8840472759C36300E68A7A /* DFRPrivateWrapper.m in Sources */,
+				4F4D0941275FCA5600EDC939 /* UIAccess.m in Sources */,
+				4F8840372759496500E68A7A /* SubmenuTouchBar.m in Sources */,
+				4F4D094A275FD10500EDC939 /* ExternalMB.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,22 +383,25 @@
 		4FEB2BE3272B1186001D9EBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = tbfmac;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = touchBarFun/touchBarFun.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = "sidecar present";
 				DEVELOPMENT_TEAM = VB9EL34RG4;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_FILE = touchBarFun/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2021 Ethan Chaffin/EthanRDoesMC. All Rights Reserved.";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethanrdoesmc.touchBarFun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -297,22 +412,25 @@
 		4FEB2BE4272B1186001D9EBE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = tbfmac;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = touchBarFun/touchBarFun.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = "sidecar present";
 				DEVELOPMENT_TEAM = VB9EL34RG4;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_FILE = touchBarFun/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2021 Ethan Chaffin/EthanRDoesMC. All Rights Reserved.";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethanrdoesmc.touchBarFun;
 				PRODUCT_NAME = "$(TARGET_NAME)";

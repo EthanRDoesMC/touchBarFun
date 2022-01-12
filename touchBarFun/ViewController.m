@@ -11,7 +11,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [_progress setUsesThreadedAnimation:true];
     // Do any additional setup after loading the view.
 }
 

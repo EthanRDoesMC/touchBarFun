@@ -8,7 +8,10 @@
 #import <Cocoa/Cocoa.h>
 
 @interface ViewController : NSViewController
+@property (strong) IBOutlet NSButtonCell *AppIcon;
+@property (strong) IBOutlet NSTextField *largeLabel;
 
+@property (strong) IBOutlet NSProgressIndicator *progress;
 
 @end
 
