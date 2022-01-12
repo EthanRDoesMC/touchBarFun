@@ -59,8 +59,8 @@
         //[_blankTB presentAsSystemModalForItemIdentifier:@"blank" placement:true];
         [NSTouchBar minimizeSystemModalTouchBar:self.touchBar?:[NSTouchBar new]];
         self.touchBar = self.makeTouchBar;
-        //[self.touchBar minimizeSystemModal];
-        //[self.makeTouchBar presentAsSystemModalForItemIdentifier:@"com.ethanrdoesmc.touchbarfun" placement:true];
+        [self.touchBar minimizeSystemModal];
+        [self.makeTouchBar presentAsSystemModalForItemIdentifier:@"com.ethanrdoesmc.touchbarfun" placement:true];
         //self.touchBar = [_cachedMenuBars objectForKey:menuApp.bundleIdentifier] ?: self.touchBar;
     }
     _currentAppBID = menuApp.bundleIdentifier;
