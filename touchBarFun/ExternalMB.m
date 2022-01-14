@@ -34,7 +34,7 @@
 
 -(void)swapTouchBars:(id)sender {
     NSMenuButton * button = sender;
-    [NSTouchBar presentSystemModalTouchBar:[[ExternalMB alloc] initWithMenuItem:button.externalItem] placement:1 systemTrayItemIdentifier:button.externalItem.name];
+    [NSTouchBar presentSystemModalTouchBar:[[ExternalMB alloc] initWithMenuItem:button.externalItem] placement:false systemTrayItemIdentifier:button.externalItem.name];
 }
 
 -(void)dismiss:(id)sender {
@@ -57,7 +57,7 @@
         //NSButton * button = [NSButton buttonWithImage:[NSImage imageWithSystemSymbolName:@"xmark.circle.fill" accessibilityDescription:nil] target:self action:@selector(dismiss:)];
         NSButton * button = [NSButton buttonWithImage:[NSImage imageNamed:NSImageNameTouchBarGoBackTemplate] target:self action:@selector(dismiss:)];
         if ([_menuItem.name isEqualToString:@"Apple"]) {
-            button.title = @"";
+            button.title = @" ";
         } else {
             button.title = _menuItem.name;
         }

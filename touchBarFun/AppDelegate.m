@@ -25,10 +25,11 @@
     [NSApplication.sharedApplication setAutomaticCustomizeTouchBarMenuItemEnabled:true];
 //    NSLog(@"%@",[[NSApplication.sharedApplication menu] itemArray]);
 //    NSLog(@"%lld", [[NSApplication.sharedApplication menu] _backgroundStyle]);
-
     
-
-    if (!AXAPIEnabled())
+    NSDictionary *options = @{(__bridge id)kAXTrustedCheckOptionPrompt: @YES};
+    BOOL accessibilityEnabled = AXIsProcessTrustedWithOptions((CFDictionaryRef)options);
+    
+    if (!accessibilityEnabled)
     {
         NSAlert *alert = [[NSAlert alloc] init];
 
