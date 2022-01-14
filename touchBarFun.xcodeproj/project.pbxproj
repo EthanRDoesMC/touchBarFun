@@ -64,6 +64,7 @@
 		4FEB2BE6272B13B8001D9EBE /* WC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WC.m; sourceTree = "<group>"; };
 		4FEB2C07272B5DB6001D9EBE /* NSPopoverTouchBarItem+NSTouchBarItemMagic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSPopoverTouchBarItem+NSTouchBarItemMagic.h"; sourceTree = "<group>"; };
 		4FEB2C08272B5DB6001D9EBE /* NSPopoverTouchBarItem+NSTouchBarItemMagic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSPopoverTouchBarItem+NSTouchBarItemMagic.m"; sourceTree = "<group>"; };
+		BBF2F9DC2791062400D8AB10 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +124,7 @@
 		4FEB2BC6272B1185001D9EBE = {
 			isa = PBXGroup;
 			children = (
+				BBF2F9DC2791062400D8AB10 /* .gitignore */,
 				4F5C808F278F99C6005E0A67 /* README.md */,
 				4FEB2BD1272B1185001D9EBE /* touchBarFun */,
 				4FEB2BD0272B1185001D9EBE /* Products */,
@@ -197,7 +199,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					4FEB2BCE272B1185001D9EBE = {
 						CreatedOnToolsVersion = 13.1;
@@ -387,10 +389,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = touchBarFun/touchBarFun.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "very alpha";
-				DEVELOPMENT_TEAM = VB9EL34RG4;
+				DEVELOPMENT_TEAM = FBT742498U;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = touchBarFun/Info.plist;
@@ -416,10 +419,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = touchBarFun/touchBarFun.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "very alpha";
-				DEVELOPMENT_TEAM = VB9EL34RG4;
+				DEVELOPMENT_TEAM = FBT742498U;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = touchBarFun/Info.plist;
