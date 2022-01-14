@@ -31,7 +31,7 @@
 
 -(void)swapTouchBars:(id)sender {
     NSMenuButton * button = sender;
-    [NSTouchBar presentSystemModalTouchBar:[[SubmenuTouchBar alloc] initWithMenu:button.item.submenu] placement:1 systemTrayItemIdentifier:button.item.submenu.title];
+    [NSTouchBar presentSystemModalTouchBar:[[SubmenuTouchBar alloc] initWithMenu:button.item.submenu] placement:false systemTrayItemIdentifier:button.item.submenu.title];
 }
 
 -(void)dismiss:(id)sender {

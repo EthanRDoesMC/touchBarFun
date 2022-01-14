@@ -31,9 +31,6 @@
     if (@available(macOS 10.14, *)) {
         [NSTouchBar presentSystemModalTouchBar:self
                       systemTrayItemIdentifier:identifier];
-    } else {
-        [NSTouchBar presentSystemModalFunctionBar:self
-                         systemTrayItemIdentifier:identifier];
     }
 }
 
@@ -43,26 +40,18 @@
         [NSTouchBar presentSystemModalTouchBar:self
                                      placement:hideControlStrip
                       systemTrayItemIdentifier:identifier];
-    } else {
-        [NSTouchBar presentSystemModalFunctionBar:self
-                                        placement:hideControlStrip
-                         systemTrayItemIdentifier:identifier];
     }
 }
 
 - (void)dismissSystemModal {
     if (@available(macOS 10.14, *)) {
         [NSTouchBar dismissSystemModalTouchBar:self];
-    } else {
-        [NSTouchBar dismissSystemModalFunctionBar:self];
     }
 }
 
 - (void)minimizeSystemModal {
     if (@available(macOS 10.14, *)) {
         [NSTouchBar minimizeSystemModalTouchBar:self];
-    } else {
-        [NSTouchBar minimizeSystemModalFunctionBar:self];
     }
 }
 
