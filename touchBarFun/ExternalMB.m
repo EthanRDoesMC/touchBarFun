@@ -53,8 +53,6 @@
 - (NSTouchBarItem *)touchBar:(NSTouchBar *)touchBar makeItemForIdentifier:(NSTouchBarItemIdentifier)identifier {
     if ([identifier isEqualToString:@"com.ethanrdoesmc.tbf.closebutton"]) {
         NSCustomTouchBarItem * tbi = [[NSCustomTouchBarItem alloc] initWithIdentifier:identifier];
-        //NSMenuButton * button = [NSMenuButton buttonWithTitle:item.title target:self action:@selector(dismiss:) item:item];
-        //NSButton * button = [NSButton buttonWithImage:[NSImage imageWithSystemSymbolName:@"xmark.circle.fill" accessibilityDescription:nil] target:self action:@selector(dismiss:)];
         NSButton * button = [NSButton buttonWithImage:[NSImage imageNamed:NSImageNameTouchBarGoBackTemplate] target:self action:@selector(dismiss:)];
         if ([_menuItem.name isEqualToString:@"Apple"]) {
             button.title = @" ";
@@ -63,7 +61,7 @@
         }
         button.imagePosition = NSImageLeading;
         button.imageHugsTitle = true;
-        button.bordered = false;
+        button.bordered = true;
         tbi.view = button;
         return tbi;
     }

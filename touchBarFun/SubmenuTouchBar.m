@@ -45,7 +45,7 @@
             if (item.hasSubmenu) {
                 NSCustomTouchBarItem * tbi = [[NSCustomTouchBarItem alloc] initWithIdentifier:identifier];
                 NSMenuButton * button = [NSMenuButton buttonWithTitle:item.title target:self action:@selector(swapTouchBars:) item:item];
-                //button.font = [NSFont menuBarFontOfSize:button.font.pointSize];
+                button.font = [NSFont systemFontOfSize:button.font.pointSize];
                 button.bordered = true;
 
                 button.image = [NSImage imageNamed:NSImageNameTouchBarGoForwardTemplate];
@@ -69,7 +69,7 @@
                 NSCustomTouchBarItem * ctbi = [[NSCustomTouchBarItem alloc] initWithIdentifier:identifier];
                 //NSString * totalString = [NSString stringWithFormat:@"%@ (%@)",item.title,item.keyEquivalent];
                 NSMenuButton * cbutton = [NSMenuButton buttonWithTitle:item.title item:item];
-                //cbutton.font = [NSFont menuBarFontOfSize:cbutton.font.pointSize];
+                cbutton.font = [NSFont systemFontOfSize:cbutton.font.pointSize];
                 cbutton.bordered = true;
                 if (item.isSeparatorItem) {
                     cbutton.bordered = false;
