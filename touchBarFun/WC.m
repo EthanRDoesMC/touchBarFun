@@ -5,6 +5,7 @@
 //  Created by Ethan Chaffin on 10/28/21.
 //
 
+#import "AppDelegate.h"
 #import "WC.h"
 #import "NSPopoverTouchBarItem+NSTouchBarItemMagic.h"
 #import "SubmenuTouchBar.h"
@@ -32,24 +33,20 @@
 
 -(void)swapTouchBars:(id)sender {
     NSMenuButton * button = sender;
-//    [NSTouchBar presentSystemModalTouchBar:[[SubmenuTouchBar alloc] initWithMenu:button.item.submenu] placement:1  systemTrayItemIdentifier:button.item.submenu.title];
     NSRunningApplication *menuApp = nil;
     menuApp = [[NSWorkspace sharedWorkspace] menuBarOwningApplication];
-    //[NSTouchBar presentSystemModalTouchBar:[[ExternalMB alloc] initWithMenuItem:button.externalItem] placement:1 systemTrayItemIdentifier:menuApp.localizedName];
     ExternalMB * subMenuBar = [[ExternalMB alloc] initWithMenuItem:button.externalItem];
     [subMenuBar presentAsSystemModalForItemIdentifier:button.externalItem.name placement:false];
 }
+
 -(void)dismiss:(id)sender {
     [[NSTouchBar new] minimizeSystemModal];
 }
+
 -(void)refreshTouchBar {
     [[NSTouchBar new] minimizeSystemModal];
     [((ViewController *)self.contentViewController).largeLabel setStringValue:@"please wait"];
-    //[NSTouchBar presentSystemModalTouchBar:_blankTB placement:1 systemTrayItemIdentifier:@"bruh"];
     NSRunningApplication *menuApp = nil;
-//    if (![_cachedMenuBars objectForKey:_currentAppBID] && _currentAppBID) {
-//        [_cachedMenuBars setObject:self.touchBar forKey:_currentAppBID];
-//    }
     menuApp = [[NSWorkspace sharedWorkspace] menuBarOwningApplication];
     [((ViewController *)self.contentViewController).AppIcon setImage:menuApp.icon];
     [((ViewController *)self.contentViewController).AppIcon setTitle:[NSString stringWithFormat:@" %@",menuApp.localizedName]];
@@ -61,13 +58,14 @@
         self.touchBar = self.makeTouchBar;
         [self.touchBar minimizeSystemModal];
         [self.makeTouchBar presentAsSystemModalForItemIdentifier:@"com.ethanrdoesmc.touchbarfun" placement:false];
-        //self.touchBar = [_cachedMenuBars objectForKey:menuApp.bundleIdentifier] ?: self.touchBar;
     }
     _currentAppBID = menuApp.bundleIdentifier;
-
+    [AppDelegate buildMenu];
+    
     [((ViewController *)self.contentViewController).progress stopAnimation:nil];
     [((ViewController *)self.contentViewController).largeLabel setStringValue:@"loaded the menu bar for"];
 }
+
 -(void)presentTouchBar {
     [self.touchBar presentAsSystemModalForItemIdentifier:@"com.ethanrdoesmc.touchbarfun" placement:false];
 }
@@ -81,40 +79,9 @@
 
     [super windowDidLoad];
 
-    //[NSTouchBar presentSystemModalTouchBar:[[NSTouchBar alloc] init] placement:0 systemTrayItemIdentifier:@"black"];
     [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
                                                            selector:@selector(refreshTouchBar)
                                                                name:NSWorkspaceDidActivateApplicationNotification object:nil];
-//    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
-//                                                           selector:@selector(refreshTouchBar)
-//                                                               name:NSWorkspaceDidLaunchApplicationNotification object:nil];
-//    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
-//                                                           selector:@selector(refreshTouchBar)
-//                                                               name:NSWorkspaceDidTerminateApplicationNotification object:nil];
-
-    //[NSTouchBarItem setControlStripPresence:TRUE for:@"Apple"];
-    
-//    NSString * appName = [[[NSWorkspace sharedWorkspace] menuBarOwningApplication] bundleIdentifier];
-//    SystemEventsApplication* sevApp = [SBApplication applicationWithBundleIdentifier:@"com.apple.systemevents"];
-//    NSLog(@"sevApp: %@", sevApp);
-//    SystemEventsProcess* proc = [[sevApp applicationProcesses] objectWithName:appName];
-//    NSLog(@"proc: %@", proc);
-//    NSLog(@"bar: %lu", (unsigned long)proc.menuBarItems.count);
-//    for (SystemEventsMenuBar* menuBar in proc.menuBars) {
-//        for (SystemEventsMenuBarItem* menuBaritem in menuBar.menuBarItems) {
-//            NSLog(@"menubaritem: %@", menuBaritem.name);
-//        }
-//    }
-//    NSLog(@"%@", [NSMenu _currentTrackingInfo]);
-//    [StatusBarItemManager statusBarItems];
-
-
-
-
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
-    //[_TextField setStringValue:[NSString stringWithFormat:@"%@   %@",[NSDateFormatter localizedStringFromDate:[NSDate date] dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle], [NSDateFormatter localizedStringFromDate:[NSDate date] dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterShortStyle]]];
-
-
 }
 
 - (NSTouchBarItem *)touchBar:(NSTouchBar *)touchBar makeItemForIdentifier:(NSTouchBarItemIdentifier)identifier {
@@ -125,7 +92,6 @@
     NSArray *menu = [ui getAppMenu:menuApp];
     if ([identifier isEqualToString:@"hidebutton"]) {
         NSCustomTouchBarItem * tbi = [[NSCustomTouchBarItem alloc] initWithIdentifier:identifier];
-        //NSMenuButton * button = [NSMenuButton buttonWithTitle:item.title target:self action:@selector(dismiss:) item:item];
         NSButton * button = [NSButton buttonWithTitle:@"" target:touchBar action:@selector(minimizeSystemModal)];
         button.image = [NSImage imageWithSystemSymbolName:@"chevron.right" accessibilityDescription:nil];
         button.bordered = false;
@@ -144,8 +110,8 @@
                     //NSMenuButton * button = [NSMenuButton buttonWithTitle:item.title target:self action:@selector(dismiss:) item:item];
                     NSMenuButton * button = [NSMenuButton buttonWithTitle:@"" target:self action:@selector(swapTouchBars:) externalItem:item];
                     button.image = [NSImage imageWithSystemSymbolName:@"applelogo" accessibilityDescription:nil];
-                    button.bordered = false;
-                    button.showsBorderOnlyWhileMouseInside = true;
+                    button.bordered = true;
+                    button.showsBorderOnlyWhileMouseInside = false;
                     tbi.view = button;
                     //[tbi addToSystemTray];
                     return tbi;
@@ -154,9 +120,9 @@
                     NSCustomTouchBarItem * tbi = [[NSCustomTouchBarItem alloc] initWithIdentifier:identifier];
                     //NSMenuButton * button = [NSMenuButton buttonWithTitle:item.title target:self action:@selector(dismiss:) item:item];
                     NSMenuButton * button = [NSMenuButton buttonWithTitle:item.name target:self action:@selector(swapTouchBars:) externalItem:item];
-                    button.font = [NSFont boldSystemFontOfSize:button.font.pointSize];
+                    button.font = [NSFont boldSystemFontOfSize:(button.font.pointSize + 3)];
                     //button.image = menuApp.icon;
-                    button.bordered = false;
+                    button.bordered = true;
                     button.imagePosition = NSImageLeading;
                     button.imageHugsTitle = true;
                     tbi.view = button;
@@ -166,11 +132,11 @@
                 NSMenuButton * button = [NSMenuButton buttonWithTitle:item.name target:self action:@selector(swapTouchBars:) externalItem:item];
                 if ([item.name isEqualToString:menuApp.localizedName]) {
                     //button.contentTintColor = [NSColor whiteColor];
-                    button.font = [NSFont boldSystemFontOfSize:button.font.pointSize];
+                    button.font = [NSFont boldSystemFontOfSize:(button.font.pointSize + 2)];
                 } else {
                     button.font = [NSFont menuBarFontOfSize:button.font.pointSize];
                 }
-                button.bordered = false;
+                button.bordered = true;
                 tbi.view = button;
                 //NSLog(@"identifier: %@ | title: %@", identifier, item.name);
                 return tbi;
